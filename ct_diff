@@ -1,0 +1,8 @@
+# Example: ct_diff  2012-09-04_15.36.21  2012-09-04_16.12.46
+
+pathA="ct_run.test@example.$1/ejabberd_tests.tests.logs/run.*/suite.log"
+pathB="ct_run.test@example.$2/ejabberd_tests.tests.logs/run.*/suite.log"
+
+filter="(=(started|finished|failed|successful|elapsed|auto_skipped|group_time|logfile|ended)|---|\d{2,4}[,c])"
+
+colordiff $pathA $pathB | egrep -v $filter
