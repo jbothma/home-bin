@@ -1,0 +1,1 @@
+ct_run -sname test -setcookie ejabberd -dir tests -pa tests deps/*/ebin -config test.config -logdir ct_report -suite "$1_SUITE"
